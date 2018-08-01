@@ -1,3 +1,33 @@
+#terminal-background {
+  background-color: #300a24;
+  height: 410px;
+  width: 732px;
+  /*color: #8ae234;*/
+  color: #66ff33;
+  font-family:"ubuntu mono";
+  font-size:16px;
+  font-weight:600;
+  margin: 0px 0px 0px 0px;
+}
+
+.whiteText {
+  color: white;
+  font-weight: normal;
+}
+
+.blueText {
+  color: #0099ff;
+  font-weight: normal;
+}
+
+#terminal-top {
+  height: 30px;
+  width: 732px;
+  background-color: #43423d;
+  border-radius: 5px 5px 0px 0px;
+}
+
+
 #terminal {
   font-weight: 100;
   font-size: 30px;

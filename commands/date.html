@@ -5,44 +5,36 @@
     <link href="commands.css" rel="stylesheet"/>
   </head>
   <style>
-  #cursor {
-    width: 10px;
+  .cursor {
+    width: 5px;
     height: 10px;
-    color: green;
-    opacity:1;
+    background-color: white;
+    display:inline-block;
   }
   #container {
-    width: 20px;
-    height: 20px;
-    background-color: red;
+    width: 9px;
+    height: 18px;
+    background-color: white;
     color: green;
-    opacity:1;
   }
   </style>
   <body>
-    <script>cursor();</script>
     <h1>date example:</h1>
     <h3>In terminal:</h3>
     <div id="terminal">|asldkjflwk</div>
     <button onclick="move()">click</button>
-    <div id="cursor"></div>
-    <div id="container">asda</div>
+    <div>asda</div>
+    <div id="terminal-top"></div>
+    <div id="terminal-background">userid@localhost<span class="whiteText">:</span><span class="blueText">~</span><span class="whiteText">$</span> 
+      <div id="container" class="cursor">
+      
+      </div>
+    </div>
     <p></p>
     <script>
     function move() {
       var elem = document.getElementById('container');
       var pos = 0;
-      /*var id = setInterval(frame, 10);
-      function frame() {
-        if (pos == 350) {
-          clearInterval(id);
-        }
-        else {
-          pos++;
-          elem.style.top = pos + 'px';
-          elem.style.left = pos + 'px';
-        }
-      }*/
       function updateLater() {
         if(pos%2==0) {
           elem.style.opacity = "1";
@@ -54,21 +46,6 @@
         setTimeout(updateLater, 600);
       }
       updateLater();
-    }
-    </script>
-    <script>
-    function cursor() {
-      var elem = document.getElementById("cursor");
-      var op = 1;
-      //for (;;) {
-        if (op == 1) {
-          elem.style.opacity = 0;
-          op = 0;
-        }
-        else {
-          elem.style.opacity = 1;
-        }
-      //}
     }
     </script>
   </body>
