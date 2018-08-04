@@ -16,15 +16,39 @@
     height: 18px;
     background-color: white;
     color: green;
+    position: absolute;
+    margin: 0px 0px 0px 10px;
   }
   </style>
   <body>
     <h1>date example:</h1>
     <h3>In terminal:</h3>
     <div id="terminal">|asldkjflwk</div>
-    <button onclick="move()">click</button>
+    <!--<button onclick="move()">click</button>-->
     <div>asda</div>
-    <div id="terminal-top"><div id="exit-button"></div><div id="minimize-button"></div><div></div></div>
+    <div id="terminal-top"><div id="exit-button"><div id="x-symbol">
+		<svg height="6" width="6">
+			<defs>
+				<filter id="f1" x="0" y="0" width="200%" height = "200%">
+					<feOffset result="offOut" in="SourceGraphic" dx="0" dy="-1" />
+					<feBlend in="SourceGraphic" in2="offOut" mode="normal" />
+				</filter>
+			</defs>
+  		<line x1="0" y1="0" x2="6" y2="6" style="stroke:rgb(0,0,0);stroke-width:1" filter="url(#f1)"/>
+  		<line x1="6" y1="0" x2="0" y2="6" style="stroke:rgb(0,0,0);stroke-width:1" filter="url(#f1)"/>
+		</svg>
+</div></div><div id="minimize-button"><div id="minimize-symbol">
+		<svg height="6" width="8">
+			<!--<defs>
+				<filter id="f1" x="0" y="0" width="200%" height = "200%">
+					<feOffset result="offOut" in="SourceGraphic" dx="0" dy="-1" />
+					<feBlend in="SourceGraphic" in2="offOut" mode="normal" />
+				</filter>
+			</defs>-->
+  		<line x1="0" y1="5" x2="8" y2="5" style="stroke:rgb(0,0,0);stroke-width:1" />
+		</svg>
+
+</div></div><div id="resize-button"></div></div>
     <div id="terminal-background">userid@localhost<span class="whiteText">:</span><span class="blueText">~</span><span class="whiteText">$</span> 
       <div id="container" class="cursor">
       
@@ -48,5 +72,6 @@
       updateLater();
     }
     </script>
+    <script>move();</script>
   </body>
 </html>
